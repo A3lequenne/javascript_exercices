@@ -11,4 +11,13 @@
 
 (() => {
     // your code here
+    const min = 0x100000;
+    const max = 0xFFFFFF;
+        
+    document.getElementById("run").addEventListener("click", () => {
+        let color = Math.floor(Math.random() * (max - min + 1)) + min;
+        color = color.toString(16).toUpperCase();
+        color = '#' + color;
+        document.getElementById("body").style.backgroundColor = color;
+    })
 })();

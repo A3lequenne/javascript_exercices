@@ -17,4 +17,7 @@ More exercices about math concepts in JS
 - fizzbuzz (write numbers from 1 to 100 with conditions on 3 and 5 multiples)
 
 ## Colors
-- Change the background of the webpage when clicking on a button
+- Changes the background's color of the webpage when clicking on a button (red, green, yellow and blue)
+- Changes the background's color of the webpage based of the user's input
+- Changes the background's color of the webpage when clicking on a button (randomly chosen)
+

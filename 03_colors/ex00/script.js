@@ -11,5 +11,16 @@
 
 (() => {
     // your code here
-    
+    document.getElementById("red").addEventListener("click", () => {
+         document.getElementById("body").style.backgroundColor = 'red';       
+    });
+    document.getElementById("green").addEventListener("click", () => {
+        document.getElementById("body").style.backgroundColor = 'green';       
+    });
+    document.getElementById("yellow").addEventListener("click", () => {
+        document.getElementById("body").style.backgroundColor = 'yellow';       
+    });
+    document.getElementById("blue").addEventListener("click", () => {
+        document.getElementById("body").style.backgroundColor = 'blue';       
+   });
 })();
