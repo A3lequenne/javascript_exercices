@@ -21,3 +21,6 @@ More exercices about math concepts in JS
 - Changes the background's color of the webpage based of the user's input
 - Changes the background's color of the webpage when clicking on a button (randomly chosen)
 
+## Dates
+- Changes the greeting message depending on the hour
+- Same but asked to work with minutes aswell
