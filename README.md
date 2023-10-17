@@ -10,4 +10,11 @@ A few exercices to learn to basics of JS
 ## Maths
 More exercices about math concepts in JS
 - Calculator (very basic calculator in JS)
-- 
+- Calculator (same exercice but using switch cases)
+- Square even (little script to show the squares of even numbers between 1 and 21)
+- Sort given numbers in ascending order
+- Calculate and show the factorial of a given number
+- fizzbuzz (write numbers from 1 to 100 with conditions on 3 and 5 multiples)
+
+## Colors
+- Change the background of the webpage when clicking on a button

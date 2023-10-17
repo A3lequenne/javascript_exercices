@@ -1,6 +1,6 @@
 /* becode/javascript
  *
- * /02-maths/05-factorial/script.js - 2.5: Factorielle
+ * /02-maths/04-sort-numbers/script.js - 2.4: classer des nombres
  *
  * coded by leny@BeCode
  * started at 26/10/2018
@@ -14,5 +14,9 @@
 
     document.getElementById("run").addEventListener("click", () => {
         // your code here
+        let values = document.getElementById("numbers").value;
+        let tab_values = values.split(',').map(Number);
+        tab_values.sort((a, b) => a - b);
+        alert(tab_values);
     });
 })();

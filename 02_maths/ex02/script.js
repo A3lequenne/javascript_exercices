@@ -1,6 +1,6 @@
 /* becode/javascript
  *
- * /02-maths/04-sort-numbers/script.js - 2.4: classer des nombres
+ * /02-maths/03-even-square/script.js - 2.3: carrés des pairs
  *
  * coded by leny@BeCode
  * started at 26/10/2018
@@ -10,9 +10,15 @@
 // You will have time to focus on it later.
 
 (() => {
-    // to get the value of an input: document.getElementById("element-id").value
-
     document.getElementById("run").addEventListener("click", () => {
         // your code here
+        let i = 2;
+        const res = [];
+
+        while (i < 21) {
+            res.push(i * i);
+            i += 2;
+        }
+        alert(res);
     });
 })();
