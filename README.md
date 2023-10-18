@@ -29,3 +29,6 @@ Usage of the date format in JavaScript
 - Calculates and shows the age of the user today
 - Writes down the date and the exact time (when the script is launched)
 - Shows wich month contained a "Friday the 13th" from the year only (using Zeller's algorithm)
+
+## Arrays
+- 
