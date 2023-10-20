@@ -11,4 +11,18 @@
 
 (() => {
     // your code here
+    let i = 0;
+    typeElem = document.getElementById("target");
+    typeText = typeElem.textContent;
+
+    document.getElementById("target").innerHTML = '';
+
+    function typeWriter() {
+        if (i < typeText.length) {
+            document.getElementById("target").innerHTML += typeText.charAt(i); 
+            i++;
+            setTimeout(typeWriter, Math.floor(Math.random() * (500 - 100 + 1)) + 100);
+        }    
+    }
+    typeWriter();
 })();

@@ -11,4 +11,10 @@
 
 (() => {
     // your code here
+    let slider = document.getElementById("slider");
+    let output = document.getElementById("target");
+
+    slider.oninput = function() {
+        output.innerHTML = '+' + this.value;
+    }
 })();

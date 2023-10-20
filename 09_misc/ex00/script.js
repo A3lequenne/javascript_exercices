@@ -11,4 +11,34 @@
 
 (() => {
     // your code here
+    let waveElem = document.getElementById("target");
+    let waveText = waveElem.textContent;
+    let waveCopy = waveText;
+    let fontSize = 16;
+    let growing = true;
+    let i = 0;
+
+    document.getElementById("target").innerHTML = '';
+
+    while (i < waveText.length) {
+        const span = document.createElement("span");
+        span.textContent = waveCopy[i];
+
+        if (growing) {
+            fontSize += 2;
+          } 
+        else {
+            fontSize -= 2;
+          }
+        
+        if (fontSize >= 30 || fontSize <= 16) {
+            growing = !growing;
+          }
+
+        span.style.fontSize = `${fontSize}px`;
+        waveElem.appendChild(span);
+
+        i++;
+    }
+    waveElem.waveText = "";
 })();
