@@ -27,12 +27,15 @@
             </header>
             <div class="content">
                 <section class="explain">
-                    <p>Au chargement de la page, le script choisi un nombre entre 1 et 100, puis demande à l'utilisateur de soumettre un chiffre. Le script répond "plus grand" ou "plus petit" en fonction, ou le félicite si le nombre est correct, tout en affichant son nombre d'essais.</p>
+                    <div id="message"><p>Au chargement de la page, le script choisi un nombre entre 1 et 100, puis demande à l'utilisateur de soumettre un chiffre. Le script répond "plus grand" ou "plus petit" en fonction, ou le félicite si le nombre est correct, tout en affichant son nombre d'essais.</p></div>
+                    <label for="guessField">Enter a guess: </label>
+                    <input type="text" id="guessField">
+                    <input type="submit" value="Submit guess" id="submitguess">
                 </section>
             </div>
         </div>
 
-        <script src="./script.js"></script>
+        <script src="./script.js" async></script>
     </body>
 </html>
 

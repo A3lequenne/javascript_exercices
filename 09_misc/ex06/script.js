@@ -11,4 +11,20 @@
 
 (() => {
     // your code here
+    let increment = document.getElementById("increment");
+    let output = document.getElementById("target");
+    let number = 0;
+
+    const storedValue = localStorage.getItem("savedValue");
+    if (storedValue) {
+        document.getElementById("target").value = storedValue;
+        number = storedValue;
+        output.innerHTML = storedValue;
+    }
+    
+    increment.addEventListener("click", () => {
+        number++;
+        localStorage.setItem("savedValue", number);
+        output.innerHTML = number;
+    })
 })();

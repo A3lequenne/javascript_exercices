@@ -15,29 +15,62 @@
     let button_2 = document.getElementById("part-two");
     let button_3 = document.getElementById("part-three");
     let button_4 = document.getElementById("part-four");
-    let button_4 = document.getElementById("target");
+    let showNumber = document.getElementById("target");
+
+    function incrementButton(min, max, button) {
+        number = parseInt(button.textContent);
+        
+        number = number < max ? number + 1 : min;
+        
+        if (number.toString().length < 2) {
+            button.innerHTML = '0' + number.toString();
+        }
+        else if (number == 100)
+            button.innerHTML = '00';
+        else if (number == 500)
+            button.innerHTML = '460';
+        else
+            button.innerHTML = number.toString();
+        return (number);
+    }
+
+    function incrementNumber(number, showNumber, index) {
+        realIndex = index * 2;
+        let numberToModify = parseInt(showNumber.textContent);
+        if (number == 100) {
+            numberToModify -= 99 * (10 ** realIndex);
+            console.log("check");
+        }
+        else
+            numberToModify += 1 * (10 ** realIndex);
+        showNumber.innerHTML = '+' + numberToModify;
+    }
 
     button_1.addEventListener("click", () => {
-        if (button_1.textContent < 499)
-            button_1.innerHTML = parseInt(button_1.textContent) + 1;
+        let number = incrementButton(460, 500, button_1);
+        let numberToModify = parseInt(showNumber.textContent);
+        
+        if (number == 500) {
+            numberToModify -= 39 * (10 ** 6);
+            console.log("check");
+        }
         else
-            button_1.innerHTML = 460;
+            numberToModify += 1 * (10 ** 6);
+        showNumber.innerHTML = '+' + numberToModify;
     });
 
     button_2.addEventListener("click", () => {
-        if (button_2.textContent < 99)
-            button_2.innerHTML = parseInt(button_2.textContent) + 1;
-        else
-            button_2.innerHTML = '00';
+        const number = incrementButton(0, 100, button_2);
+        incrementNumber(number, showNumber, 2);
     });
 
     button_3.addEventListener("click", () => {
-        if (button_3.textContent < 99)
-            button_3.innerHTML = parseInt(button_3.textContent) + 1;
+        const number = incrementButton(0, 100, button_3);
+        incrementNumber(number, showNumber, 1);
     });
 
     button_4.addEventListener("click", () => {
-        if (button_4.textContent < 99)
-            button_4.innerHTML = parseInt(button_4.textContent) + 1;
+        const number = incrementButton(0, 100, button_4);
+        incrementNumber(number, showNumber, 0);
     });
 })();
