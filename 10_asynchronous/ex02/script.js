@@ -11,4 +11,35 @@
 
 (() => {
     // your code here
+    document.getElementById("run").addEventListener("click", () => {
+        const articleWithComment = [];
+        
+        window.lib.getPosts(function(error, articles) {
+            articles.forEach(article => {
+                window.lib.getComments(article.id, function(error, comment) {
+                    article.comments = comment;
+                    articleWithComment.push(article);
+                    console.log(article);
+                });
+            });
+        });
+        /*function showPosts(error, articles) {
+            if (!error) {
+                articles.forEach(article => {
+                    article.comments = window.lib.getComments(article.id, showComments);
+                    console.log(article);
+                });
+            }
+        }
+
+        function showComments(error, comment) {
+            if (!error) {
+                //article.comments = comment;
+                //articleWithComment.push(comment);
+                //console.table(article);
+            }
+        }
+
+        window.lib.getPosts(showPosts);*/
+    });
 })();

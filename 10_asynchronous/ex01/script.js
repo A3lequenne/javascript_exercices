@@ -11,4 +11,18 @@
 
 (() => {
     // your code here
+    document.getElementById("run").addEventListener("click", () => {
+        /*window.lib.getPosts(function(error, articles) {
+            console.log(articles);
+        });*/
+        function showArticles(error, articles) {
+            if (!error) {
+                console.log(articles);
+            }
+            else {
+                console.error(error);
+            }
+        }
+        window.lib.getPosts(showArticles); 
+    });
 })();

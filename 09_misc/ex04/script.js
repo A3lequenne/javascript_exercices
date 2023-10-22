@@ -11,4 +11,11 @@
 
 (() => {
     // your code here
+    let button_1 = document.getElementById("part-one");
+    let button_2 = document.getElementById("part-two");
+    let button_3 = document.getElementById("part-three");
+    let button_4 = document.getElementById("part-four");
+    let showNumber = document.getElementById("target");
+
+    
 })();

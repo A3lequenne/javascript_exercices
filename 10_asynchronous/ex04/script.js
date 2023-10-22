@@ -11,4 +11,13 @@
 
 (() => {
     // your code here
+    const firstPromise = window.lib.getPosts();
+
+    firstPromise.then(articles => {
+            console.log(articles);
+        });
+
+    firstPromise.catch(error => {
+            console.error(error);
+        });
 })();

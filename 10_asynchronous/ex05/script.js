@@ -11,4 +11,16 @@
 
 (() => {
     // your code here
+    document.getElementById("run").addEventListener("click", () => {
+        const getPostsPromice = window.lib.getPosts();
+        getPostsPromice.then(articles => {
+            articles.forEach(article => {
+                const getCommentsPromice = window.lib.getComments(article.id);
+                getCommentsPromice.then(comment => {
+                    article.comments = comment;
+                    console.table(article);
+                });
+            });
+        });
+    });
 })();
